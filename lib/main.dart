@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:journey_with_me/description-place.dart';
+import 'package:journey_with_me/review-list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Journey With Me"),
         ),
-        body: DescriptionPlace(namePlace: "Bahamas", stars: 4, descriptionPlace: descriptionDummy)
+        // body: DescriptionPlace(namePlace: "Bahamas", stars: 4, descriptionPlace: descriptionDummy),
+        body: const ReviewList(),
       ),
     );
   }
