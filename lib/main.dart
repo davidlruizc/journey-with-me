@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:journey_with_me/description-place.dart';
+import 'package:journey_with_me/gradient-back.dart';
 import 'package:journey_with_me/review-list.dart';
 
 void main() {
@@ -28,14 +29,23 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.cyan,
+        primarySwatch: Colors.deepPurple,
       ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Journey With Me"),
         ),
-        // body: DescriptionPlace(namePlace: "Bahamas", stars: 4, descriptionPlace: descriptionDummy),
-        body: const ReviewList(),
+        body: Stack(
+          children: <Widget>[
+            ListView(
+              children: <Widget>[
+                DescriptionPlace(namePlace: "Bahamas", stars: 4, descriptionPlace: descriptionDummy),
+                const ReviewList(),
+              ],
+            ),
+            const GradientBack(),
+          ],
+        ),
       ),
     );
   }
