@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
                 const ReviewList(),
               ],
             ),
-            const GradientBack(),
+            const GradientBack(title: "Popular"),
           ],
         ),
       ),
